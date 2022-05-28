@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="KGk-i7-Jjw" customClass="FixedCostCell" customModule="FixedCost_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="380" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="380" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-nC-w5p">
+                        <rect key="frame" x="10" y="6" width="356.5" height="41"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="光熱費・家賃ssssssssssssssss" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEK-Ww-bIs">
+                                <rect key="frame" x="0.0" y="0.0" width="180" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="pwx-Ui-ccy"/>
+                                    <constraint firstAttribute="height" constant="40" id="qTM-JZ-wvF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="サブタイトルdddddddd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-OR-diO">
+                                <rect key="frame" x="180" y="0.0" width="30" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="SCN-HS-cpY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400円" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P72-70-NYW">
+                                <rect key="frame" x="210" y="0.0" width="116.5" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116.5" id="QHW-7d-Bgb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/月" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-nA-aTB">
+                                <rect key="frame" x="326.5" y="0.0" width="30" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="IwO-R8-brH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4z3-nC-w5p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="DwK-o4-Nez"/>
+                    <constraint firstItem="4z3-nC-w5p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="PN1-CC-90B"/>
+                    <constraint firstAttribute="trailing" secondItem="4z3-nC-w5p" secondAttribute="trailing" constant="10" id="cxT-TP-AWl"/>
+                    <constraint firstAttribute="bottom" secondItem="4z3-nC-w5p" secondAttribute="bottom" constant="6" id="jx0-mW-49s"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="category" destination="ntC-OR-diO" id="V3X-g9-XzT"/>
+                <outlet property="costValue" destination="P72-70-NYW" id="nib-F4-ha1"/>
+                <outlet property="listTitle" destination="AEK-Ww-bIs" id="bfD-Oi-v1V"/>
+                <outlet property="period" destination="CQT-nA-aTB" id="0kl-I5-9C9"/>
+            </connections>
+            <point key="canvasLocation" x="139.13043478260872" y="52.566964285714285"/>
+        </tableViewCell>
+    </objects>
+</document>
