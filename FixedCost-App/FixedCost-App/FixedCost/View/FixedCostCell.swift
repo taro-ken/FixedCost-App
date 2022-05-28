@@ -16,7 +16,7 @@ class FixedCostCell: UITableViewCell {
     
     func configure(model: CostModel) {
         listTitle.text = model.name
-        category.text = model.category
+        category.text = model.debitDate
         if model.period == true {
             period.text = "/月"
             costValue.text = "\(model.value.withCommaString)円"

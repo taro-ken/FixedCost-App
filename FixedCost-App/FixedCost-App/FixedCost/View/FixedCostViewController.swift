@@ -19,9 +19,10 @@ final class FixedCostViewController: UIViewController {
     @IBOutlet weak var emptyLabel: UILabel!
     @IBOutlet weak var totalFixedCostBackView: UIView!
     @IBOutlet weak var differenceBackView: UIView!
-    
     @IBOutlet weak var addFixedCostButton: UIButton!
     @IBOutlet weak var shadowView: UIView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
     
     @IBOutlet weak var fixedCostTableView: UITableView! {
         didSet {
@@ -58,6 +59,8 @@ final class FixedCostViewController: UIViewController {
         shadowView.layer.shadowColor = UIColor.darkGray.cgColor
         shadowView.layer.shadowOffset = CGSize(width: 3, height: 3)
         
+        navigationBar.barTintColor = .tertiarySystemGroupedBackground
+        
         addFixedCostButton.addTarget(self, action: #selector(addFixedCost), for: .touchUpInside)
         
         guard let realm = try? Realm() else {return}
@@ -68,7 +71,14 @@ final class FixedCostViewController: UIViewController {
         totalFixedCost.text = "\(totalCostContainer.withCommaString)円"
         let salary = UserDefaults.standard.integer(forKey: "salary")
         differenceContainer = salary - totalCostContainer
-        differenceLabel.text = "\(differenceContainer.withCommaString)円"
+        
+        if differenceContainer <= 0 {
+            differenceLabel.textColor = .red
+            differenceLabel.text = "\(differenceContainer.withCommaString)円"
+        } else {
+            differenceLabel.textColor = .systemCyan
+            differenceLabel.text = "+\(differenceContainer.withCommaString)円"
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,14 +99,25 @@ final class FixedCostViewController: UIViewController {
     @IBAction func differenceSwich(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            differenceLabel.text = "\(differenceContainer.withCommaString)円"
+            if differenceContainer <= 0 {
+                differenceLabel.textColor = .red
+                differenceLabel.text = "\(differenceContainer.withCommaString)円"
+            } else {
+                differenceLabel.textColor = .systemCyan
+                differenceLabel.text = "+\(differenceContainer.withCommaString)円"
+            }
         case 1:
-            differenceLabel.text = "\((totalCostContainer * 12).withCommaString)円"
+            if differenceContainer <= 0 {
+                differenceLabel.textColor = .red
+                differenceLabel.text = "\((differenceContainer * 12).withCommaString)円"
+            } else {
+                differenceLabel.textColor = .systemCyan
+                differenceLabel.text = "+\((differenceContainer * 12).withCommaString)円"
+            }
         default:
             break
         }
     }
-    
     
     @objc func addFixedCost() {
         let vc = UIStoryboard.init(name: "AddfixedCost", bundle: nil).instantiateInitialViewController() as! AddfixedCostViewController

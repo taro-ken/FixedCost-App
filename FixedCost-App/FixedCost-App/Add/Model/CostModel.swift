@@ -10,7 +10,7 @@ import RealmSwift
 
 final class CostModel: Object {
     @objc dynamic var name: String?
-    @objc dynamic var category: String?
+    @objc dynamic var debitDate: String?
     @objc dynamic var period: Bool = true
     @objc dynamic var value: Int = 0
     @objc dynamic var memo: String?

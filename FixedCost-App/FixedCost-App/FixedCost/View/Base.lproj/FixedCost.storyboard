@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iNX-C0-qTI">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,25 +8,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--固定費計算-->
+        <!--Fixed Cost View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FixedCostViewController" customModule="FixedCost_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固定費合計" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vN6-yP-qwW">
-                                <rect key="frame" x="20" y="98" width="374" height="20.666666666666671"/>
+                                <rect key="frame" x="20" y="50" width="374" height="20.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfQ-L8-c6E">
-                                <rect key="frame" x="30" y="128.66666666666666" width="354" height="156.99999999999997"/>
+                                <rect key="frame" x="15" y="80.666666666666686" width="384" height="129"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rb4-4O-P0F">
-                                        <rect key="frame" x="20" y="10" width="314" height="31"/>
+                                        <rect key="frame" x="20" y="10" width="344" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="e5I-Lg-OTY"/>
                                         </constraints>
@@ -39,7 +39,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-Tc-OvI">
-                                        <rect key="frame" x="20" y="42" width="314" height="113"/>
+                                        <rect key="frame" x="20" y="42" width="344" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -63,16 +63,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余るお金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyG-iN-f0W">
-                                <rect key="frame" x="20" y="295.66666666666669" width="374" height="24.666666666666686"/>
+                                <rect key="frame" x="20" y="219.66666666666666" width="374" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCt-s1-sfq">
-                                <rect key="frame" x="30" y="330.33333333333331" width="354" height="157.33333333333331"/>
+                                <rect key="frame" x="15" y="250" width="384" height="129"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1dW-rl-KRJ">
-                                        <rect key="frame" x="20" y="10" width="314" height="31"/>
+                                        <rect key="frame" x="20" y="10" width="344" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="pNK-N0-uTe"/>
                                         </constraints>
@@ -85,9 +85,9 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57B-zr-mlA">
-                                        <rect key="frame" x="20" y="41.999999999999993" width="314" height="113.33333333333331"/>
+                                        <rect key="frame" x="20" y="42" width="344" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemCyanColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -109,20 +109,20 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固定費リスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg5-1A-a9W">
-                                <rect key="frame" x="20" y="497.66666666666669" width="374" height="24.666666666666686"/>
+                                <rect key="frame" x="20" y="389" width="374" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-7R-1JD">
-                                <rect key="frame" x="30" y="532.33333333333337" width="354" height="283.66666666666663"/>
+                                <rect key="frame" x="15" y="419.33333333333331" width="384" height="251.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="egk-UU-A6T">
-                                <rect key="frame" x="30" y="532.33333333333337" width="354" height="283.66666666666663"/>
+                                <rect key="frame" x="15" y="419.33333333333331" width="384" height="251.66666666666669"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIQ-4d-9zz">
-                                <rect key="frame" x="344" y="802" width="50" height="50"/>
+                                <rect key="frame" x="344" y="676" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="A57-Gc-or7"/>
@@ -133,7 +133,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="固定費を追加しましょう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evu-Q9-Amj">
-                                <rect key="frame" x="107" y="662.66666666666663" width="200" height="23"/>
+                                <rect key="frame" x="107" y="533.66666666666663" width="200" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ACF-ez-a7W"/>
                                     <constraint firstAttribute="height" constant="23" id="rPc-WV-tEJ"/>
@@ -142,60 +142,69 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9E-0C-1in">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="W8j-Eq-aa6">
+                                        <barButtonItem key="rightBarButtonItem" title="給与設定" id="OsW-NG-ZO0">
+                                            <color key="tintColor" systemColor="systemCyanColor"/>
+                                            <connections>
+                                                <action selector="addMonthlySalary:" destination="BYZ-38-t0r" id="3PR-hi-wbI"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vN6-yP-qwW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0ue-ya-A3Y"/>
-                            <constraint firstItem="egk-UU-A6T" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.316746" id="158-1U-eAw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aW8-7R-1JD" secondAttribute="trailing" constant="30" id="1b3-2E-i3b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aW8-7R-1JD" secondAttribute="trailing" constant="15" id="1b3-2E-i3b"/>
                             <constraint firstItem="oCt-s1-sfq" firstAttribute="top" secondItem="eyG-iN-f0W" secondAttribute="bottom" constant="10" id="1bT-JD-IgT"/>
                             <constraint firstItem="SfQ-L8-c6E" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.175272" id="2Px-A1-XIv"/>
+                            <constraint firstItem="pIQ-4d-9zz" firstAttribute="top" secondItem="aW8-7R-1JD" secondAttribute="bottom" constant="5" id="2SC-Qn-wCe"/>
                             <constraint firstItem="oCt-s1-sfq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.175272" id="3eq-kh-sMg"/>
                             <constraint firstItem="egk-UU-A6T" firstAttribute="top" secondItem="Zg5-1A-a9W" secondAttribute="bottom" constant="10" id="4Ru-M0-hWS"/>
+                            <constraint firstItem="T9E-0C-1in" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7vU-Ud-tn4"/>
                             <constraint firstItem="Evu-Q9-Amj" firstAttribute="centerX" secondItem="egk-UU-A6T" secondAttribute="centerX" id="8G8-oJ-uDc"/>
-                            <constraint firstItem="aW8-7R-1JD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="HY8-LL-Sfv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCt-s1-sfq" secondAttribute="trailing" constant="30" id="I5l-E1-wLJ"/>
+                            <constraint firstItem="aW8-7R-1JD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="HY8-LL-Sfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oCt-s1-sfq" secondAttribute="trailing" constant="15" id="I5l-E1-wLJ"/>
                             <constraint firstItem="Zg5-1A-a9W" firstAttribute="top" secondItem="oCt-s1-sfq" secondAttribute="bottom" constant="10" id="IBf-T4-OxT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pIQ-4d-9zz" secondAttribute="bottom" constant="10" id="LlT-nA-plz"/>
                             <constraint firstItem="Evu-Q9-Amj" firstAttribute="centerY" secondItem="egk-UU-A6T" secondAttribute="centerY" id="PD6-FB-x8Y"/>
-                            <constraint firstItem="SfQ-L8-c6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PLb-Wb-pvf"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfQ-L8-c6E" secondAttribute="trailing" constant="30" id="Ud5-dG-Fao"/>
+                            <constraint firstItem="SfQ-L8-c6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="PLb-Wb-pvf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SfQ-L8-c6E" secondAttribute="trailing" constant="15" id="Ud5-dG-Fao"/>
                             <constraint firstItem="vN6-yP-qwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V79-bJ-61G"/>
                             <constraint firstItem="Zg5-1A-a9W" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0276268" id="Wcx-iv-R4I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vN6-yP-qwW" secondAttribute="trailing" constant="20" id="YGu-aN-kas"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pIQ-4d-9zz" secondAttribute="trailing" constant="20" id="abx-19-fEC"/>
-                            <constraint firstItem="egk-UU-A6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="cSg-VE-1CB"/>
+                            <constraint firstItem="T9E-0C-1in" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="by4-G9-1Aq"/>
+                            <constraint firstItem="egk-UU-A6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cSg-VE-1CB"/>
                             <constraint firstItem="eyG-iN-f0W" firstAttribute="top" secondItem="SfQ-L8-c6E" secondAttribute="bottom" constant="10" id="cZ5-cB-zTU"/>
+                            <constraint firstItem="T9E-0C-1in" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cg2-rT-Ib1"/>
                             <constraint firstItem="Zg5-1A-a9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="el8-cx-5lu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eyG-iN-f0W" secondAttribute="trailing" constant="20" id="fvu-ut-2Gp"/>
-                            <constraint firstItem="vN6-yP-qwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="iny-5u-bqr"/>
+                            <constraint firstItem="vN6-yP-qwW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="iny-5u-bqr"/>
                             <constraint firstItem="eyG-iN-f0W" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0276268" id="izG-ou-2we"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pIQ-4d-9zz" secondAttribute="bottom" constant="10" id="kZ4-tf-XK0"/>
                             <constraint firstItem="aW8-7R-1JD" firstAttribute="centerY" secondItem="egk-UU-A6T" secondAttribute="centerY" id="mbn-eh-OvG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zg5-1A-a9W" secondAttribute="trailing" constant="20" id="s91-oS-oUh"/>
                             <constraint firstItem="SfQ-L8-c6E" firstAttribute="top" secondItem="vN6-yP-qwW" secondAttribute="bottom" constant="10" id="t1m-eN-nEX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egk-UU-A6T" secondAttribute="trailing" constant="30" id="vhx-1o-UvY"/>
-                            <constraint firstItem="oCt-s1-sfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wBL-4b-n2N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="egk-UU-A6T" secondAttribute="trailing" constant="15" id="vhx-1o-UvY"/>
+                            <constraint firstItem="oCt-s1-sfq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="wBL-4b-n2N"/>
                             <constraint firstItem="aW8-7R-1JD" firstAttribute="top" secondItem="egk-UU-A6T" secondAttribute="top" id="wg9-gX-i30"/>
                             <constraint firstItem="eyG-iN-f0W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xgy-1f-dRz"/>
                             <constraint firstItem="SfQ-L8-c6E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zfA-Sh-78m"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="固定費計算" id="X46-J6-Ph7">
-                        <barButtonItem key="rightBarButtonItem" title="給与入力" id="g3Q-yV-Sox">
-                            <connections>
-                                <action selector="addMonthlySalary:" destination="BYZ-38-t0r" id="J2T-5R-E3f"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addFixedCostButton" destination="pIQ-4d-9zz" id="doI-yK-zfg"/>
                         <outlet property="differenceBackView" destination="oCt-s1-sfq" id="oDy-VR-HCs"/>
                         <outlet property="differenceLabel" destination="57B-zr-mlA" id="atf-Xn-nQL"/>
                         <outlet property="emptyLabel" destination="Evu-Q9-Amj" id="E1S-rs-3U7"/>
                         <outlet property="fixedCostTableView" destination="egk-UU-A6T" id="ma7-Om-bJ1"/>
+                        <outlet property="navigationBar" destination="T9E-0C-1in" id="9b7-ZV-Bie"/>
                         <outlet property="shadowView" destination="aW8-7R-1JD" id="p4r-KR-dpt"/>
                         <outlet property="totalFixedCost" destination="YHg-Tc-OvI" id="5JC-V3-7ab"/>
                         <outlet property="totalFixedCostBackView" destination="SfQ-L8-c6E" id="9UQ-sT-CUw"/>
@@ -203,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923.1884057971015" y="94.419642857142847"/>
+            <point key="canvasLocation" x="688.40579710144937" y="-8.1521739130434785"/>
         </scene>
         <!--AddfixedCost-->
         <scene sceneID="fYL-kZ-9J2">
@@ -215,29 +224,14 @@
             </objects>
             <point key="canvasLocation" x="1558.6956521739132" y="306.69642857142856"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="l99-d9-2sb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iNX-C0-qTI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="11f-ye-QvQ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0Hc-HA-3mi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LT3-8E-z61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="13.043478260869566" y="94.419642857142847"/>
-        </scene>
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
