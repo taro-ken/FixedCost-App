@@ -17,6 +17,4 @@ extension UIStoryboard {
     static var editCostViewController: EditCostViewController {
         UIStoryboard.init(name: "EditCost", bundle: nil).instantiateInitialViewController() as! EditCostViewController
     }
-    
-    
 }

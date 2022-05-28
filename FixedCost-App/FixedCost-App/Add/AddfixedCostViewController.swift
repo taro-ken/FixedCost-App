@@ -11,19 +11,25 @@ import RealmSwift
 final class AddfixedCostViewController: UIViewController {
     
     @IBOutlet weak var costTitle: UITextField!
-    @IBOutlet weak var costCategory: UITextField!
+    @IBOutlet weak var debitDate: UITextField!
     @IBOutlet weak var costValue: UITextField!
     @IBOutlet weak var memoTextView: UITextView!
     @IBOutlet weak var navigationVar: UINavigationBar!
     
     private var period: Bool = true
+    private  let months = (1...12).map { $0 }
+    private  let days = (1...31).map { $0 }
+    private  let pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationVar.barTintColor = .white
         memoTextView.layer.cornerRadius = 10
-        
         costValue.keyboardType = .numberPad
+        pickerView.backgroundColor = .white
+        pickerView.delegate = self
+        debitDate.inputView = pickerView
+        setKeyboardAccessory()
     }
     
     @IBAction func tapCancelButton(_ sender: Any) {
@@ -55,11 +61,12 @@ final class AddfixedCostViewController: UIViewController {
             cost.value = Int(value)!
         }
         cost.name = costTitle.text
-        cost.category = costCategory.text
+        cost.debitDate = debitDate.text
         cost.period = self.period
         cost.memo = memoTextView.text
         try? realm.write {
             realm.add(cost)
+            print(cost)
         }
         self.dismiss(animated: true)
     }
@@ -77,3 +84,62 @@ final class AddfixedCostViewController: UIViewController {
         }
     }
 }
+
+extension AddfixedCostViewController: UIPickerViewDelegate,UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if component == 0 {
+            return months.count
+        } else if component == 1 {
+            return days.count
+        } else {
+            return 0
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            return "\(months[row])月"
+        } else if component == 1 {
+            return "\(days[row])日"
+        } else {
+            return nil
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let month = months[pickerView.selectedRow(inComponent: 0)]
+        let day = days[pickerView.selectedRow(inComponent: 1)]
+        debitDate.text = "\(month)月 \(day)日"
+    }
+    
+    func setKeyboardAccessory() {
+        let keyboardAccessory = UIView(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: 36))
+        keyboardAccessory.backgroundColor = UIColor.white
+        debitDate.inputAccessoryView = keyboardAccessory
+        
+        let topBorder = UIView(frame: CGRect(x: 0, y: 0, width: keyboardAccessory.bounds.size.width, height: 0.5))
+        topBorder.backgroundColor = .lightGray
+        keyboardAccessory.addSubview(topBorder)
+        
+        let completeButton = UIButton(frame: CGRect(x: keyboardAccessory.bounds.size.width - 48, y: 0, width: 48, height: keyboardAccessory.bounds.size.height - 0.5 * 2))
+        completeButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
+        completeButton.setTitle("完了", for: .normal)
+        completeButton.setTitleColor(.systemCyan, for: .normal)
+        completeButton.setTitleColor(UIColor.red, for: .highlighted)
+        completeButton.addTarget(self, action: #selector(hidePickerView), for: .touchUpInside)
+        keyboardAccessory.addSubview(completeButton)
+        
+        let bottomBorder = UIView(frame: CGRect(x: 0, y: keyboardAccessory.bounds.size.height - 0.5, width: keyboardAccessory.bounds.size.width, height: 0.5))
+        bottomBorder.backgroundColor = .lightGray
+        keyboardAccessory.addSubview(bottomBorder)
+    }
+    
+    @objc func hidePickerView() {
+        debitDate.resignFirstResponder()
+    }
+}
+
