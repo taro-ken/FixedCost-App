@@ -17,8 +17,8 @@ final class AddfixedCostViewController: UIViewController {
     @IBOutlet weak var navigationVar: UINavigationBar!
     
     private var period: Bool = true
-    private  let months = (1...12).map { $0 }
-    private  let days = (1...31).map { $0 }
+    private  let months = (0...12).map { $0 }
+    private  let days = (0...31).map { $0 }
     private  let pickerView = UIPickerView()
     private var listModel: List<CostModel>!
     let realm = try! Realm()
@@ -58,7 +58,7 @@ final class AddfixedCostViewController: UIViewController {
         guard  let value = costValue.text else { return }
         let realm = try! Realm()
         let cost = CostModel()
-    
+        
         if self.period == false {
             cost.value = Int(value)! / 12
         } else {
@@ -71,15 +71,15 @@ final class AddfixedCostViewController: UIViewController {
         try? realm.write {
             
             if listModel == nil {
-            
-            let item = ItemList()
-            item.list.append(cost)
-            realm.add(item)
+                
+                let item = ItemList()
+                item.list.append(cost)
+                realm.add(item)
             } else {
                 listModel.append(cost)
             }
-        self.dismiss(animated: true)
-    }
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func periodSwich(_ sender: UISegmentedControl) {
@@ -111,9 +111,15 @@ extension AddfixedCostViewController: UIPickerViewDelegate,UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
-            return "\(months[row])月"
+            if row == 0 {
+                return "未設定"
+            } else {
+                return "\(months[row])月" }
         } else if component == 1 {
-            return "\(days[row])日"
+            if row == 0 {
+                return "未設定"
+            } else {
+                return "\(days[row])日"}
         } else {
             return nil
         }
@@ -122,7 +128,14 @@ extension AddfixedCostViewController: UIPickerViewDelegate,UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let month = months[pickerView.selectedRow(inComponent: 0)]
         let day = days[pickerView.selectedRow(inComponent: 1)]
-        debitDate.text = "\(month)月 \(day)日"
+        
+        if months[pickerView.selectedRow(inComponent: 0)] == 0 {
+            debitDate.text = "\(day)日"
+        } else if days[pickerView.selectedRow(inComponent: 1)] == 0 {
+            debitDate.text = "\(month)月"
+        } else {
+            debitDate.text = "\(month)月 \(day)日"
+        }
     }
     
     func setKeyboardAccessory() {
