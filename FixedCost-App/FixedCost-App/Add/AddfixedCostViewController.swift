@@ -20,6 +20,8 @@ final class AddfixedCostViewController: UIViewController {
     private  let months = (1...12).map { $0 }
     private  let days = (1...31).map { $0 }
     private  let pickerView = UIPickerView()
+    private var listModel: List<CostModel>!
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ final class AddfixedCostViewController: UIViewController {
         pickerView.delegate = self
         debitDate.inputView = pickerView
         setKeyboardAccessory()
+        listModel = realm.objects(ItemList.self).first?.list
     }
     
     @IBAction func tapCancelButton(_ sender: Any) {
@@ -55,6 +58,7 @@ final class AddfixedCostViewController: UIViewController {
         guard  let value = costValue.text else { return }
         let realm = try! Realm()
         let cost = CostModel()
+    
         if self.period == false {
             cost.value = Int(value)! / 12
         } else {
@@ -65,10 +69,17 @@ final class AddfixedCostViewController: UIViewController {
         cost.period = self.period
         cost.memo = memoTextView.text
         try? realm.write {
-            realm.add(cost)
-            print(cost)
-        }
+            
+            if listModel == nil {
+            
+            let item = ItemList()
+            item.list.append(cost)
+            realm.add(item)
+            } else {
+                listModel.append(cost)
+            }
         self.dismiss(animated: true)
+    }
     }
     
     @IBAction func periodSwich(_ sender: UISegmentedControl) {
