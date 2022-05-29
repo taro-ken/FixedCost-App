@@ -45,7 +45,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="me8-ZU-Bsj">
                                         <rect key="frame" x="0.0" y="85.5" width="280" height="55"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支払い(引き落とし日)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFq-fC-hAj">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支払い日/月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFq-fC-hAj">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20.329999999999998" id="1oP-vr-Gfa"/>
@@ -65,8 +65,8 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uW5-kF-Eyj">
-                                        <rect key="frame" x="0.0" y="170.5" width="280" height="111.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uW5-kF-Eyj">
+                                        <rect key="frame" x="0.0" y="170.5" width="280" height="91.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="値段" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDW-h8-YUb">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
@@ -78,7 +78,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ujj-7O-M48">
-                                                <rect key="frame" x="0.0" y="35.5" width="280" height="32"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="280" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="Wpl-K8-ShM"/>
                                                 </constraints>
@@ -91,7 +91,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V65-qh-19f">
-                                                <rect key="frame" x="0.0" y="81.5" width="280" height="30"/>
+                                                <rect key="frame" x="0.0" y="61.5" width="280" height="30"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="m1E-ve-Fsb"/>
@@ -102,7 +102,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="I2g-OL-Es6">
-                                        <rect key="frame" x="0.0" y="312" width="280" height="68"/>
+                                        <rect key="frame" x="0.0" y="292" width="280" height="88"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynR-Rg-gIN">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
@@ -114,7 +114,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dte-6S-Kl2">
-                                                <rect key="frame" x="0.0" y="25.5" width="280" height="42.5"/>
+                                                <rect key="frame" x="0.0" y="25.5" width="280" height="62.5"/>
                                                 <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

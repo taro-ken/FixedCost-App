@@ -25,8 +25,8 @@ final class EditCostViewController: UIViewController {
     
     private var period: Bool = true
     private var costModel:CostModel = CostModel()
-    private  let months = (1...12).map { $0 }
-    private  let days = (1...31).map { $0 }
+    private  let months = (0...12).map { $0 }
+    private  let days = (0...31).map { $0 }
     private  let pickerView = UIPickerView()
     let realm = try! Realm()
     
@@ -136,9 +136,15 @@ extension EditCostViewController: UIPickerViewDelegate,UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0 {
-            return "\(months[row])月"
+            if row == 0 {
+                return "未設定"
+            } else {
+                return "\(months[row])月" }
         } else if component == 1 {
-            return "\(days[row])日"
+            if row == 0 {
+                return "未設定"
+            } else {
+                return "\(days[row])日"}
         } else {
             return nil
         }
@@ -147,7 +153,14 @@ extension EditCostViewController: UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let month = months[pickerView.selectedRow(inComponent: 0)]
         let day = days[pickerView.selectedRow(inComponent: 1)]
-        editDebitDate.text = "\(month)月 \(day)日"
+        
+        if months[pickerView.selectedRow(inComponent: 0)] == 0 {
+            editDebitDate.text = "\(day)日"
+        } else if days[pickerView.selectedRow(inComponent: 1)] == 0 {
+            editDebitDate.text = "\(month)月"
+        } else {
+            editDebitDate.text = "\(month)月 \(day)日"
+        }
     }
     
     func setKeyboardAccessory() {
