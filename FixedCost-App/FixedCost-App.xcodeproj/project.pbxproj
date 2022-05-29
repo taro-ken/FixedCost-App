@@ -28,6 +28,7 @@
 		B4E4DF7228403AA400A1D7F7 /* EditCost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E4DF7128403AA400A1D7F7 /* EditCost.storyboard */; };
 		B4E4DF7A2841B96B00A1D7F7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4DF792841B96B00A1D7F7 /* Router.swift */; };
 		B4E4DF7C2841C7A200A1D7F7 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4DF7B2841C7A200A1D7F7 /* Int+.swift */; };
+		B4E4DF8C2842F10300A1D7F7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			files = (
 				B4BD48B7283BBB6C00F72712 /* RealmSwift in Frameworks */,
 				B4BD48B5283BBB6C00F72712 /* Realm in Frameworks */,
+				B4E4DF8C2842F10300A1D7F7 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +230,7 @@
 			packageProductDependencies = (
 				B4BD48B4283BBB6C00F72712 /* Realm */,
 				B4BD48B6283BBB6C00F72712 /* RealmSwift */,
+				B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */,
 			);
 			productName = "FixedCost-App";
 			productReference = B45F2579283A3C3200170675 /* FixedCost-App.app */;
@@ -303,6 +306,7 @@
 			mainGroup = B45F2570283A3C3200170675;
 			packageReferences = (
 				B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = B45F257A283A3C3200170675 /* Products */;
 			projectDirPath = "";
@@ -544,6 +548,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = FixedCost;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,6 +577,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = FixedCost;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,6 +713,14 @@
 				kind = branch;
 			};
 		};
+		B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -719,6 +733,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
