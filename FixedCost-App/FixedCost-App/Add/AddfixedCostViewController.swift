@@ -58,7 +58,7 @@ final class AddfixedCostViewController: UIViewController {
         guard  let value = costValue.text else { return }
         let realm = try! Realm()
         let cost = CostModel()
-    
+        
         if self.period == false {
             cost.value = Int(value)! / 12
         } else {
@@ -71,15 +71,15 @@ final class AddfixedCostViewController: UIViewController {
         try? realm.write {
             
             if listModel == nil {
-            
-            let item = ItemList()
-            item.list.append(cost)
-            realm.add(item)
+                
+                let item = ItemList()
+                item.list.append(cost)
+                realm.add(item)
             } else {
                 listModel.append(cost)
             }
-        self.dismiss(animated: true)
-    }
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func periodSwich(_ sender: UISegmentedControl) {
@@ -134,7 +134,7 @@ extension AddfixedCostViewController: UIPickerViewDelegate,UIPickerViewDataSourc
         } else if days[pickerView.selectedRow(inComponent: 1)] == 0 {
             debitDate.text = "\(month)月"
         } else {
-        debitDate.text = "\(month)月 \(day)日"
+            debitDate.text = "\(month)月 \(day)日"
         }
     }
     
