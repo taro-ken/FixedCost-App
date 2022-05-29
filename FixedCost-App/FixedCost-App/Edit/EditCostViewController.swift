@@ -58,10 +58,8 @@ final class EditCostViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             period = true
-            print("月")
         case 1:
             period = false
-            print("年")
         default:
             break
         }

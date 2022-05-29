@@ -45,6 +45,7 @@ final class FixedCostViewController: UIViewController {
         addFixedCostButton.layer.shadowColor = UIColor.darkGray.cgColor
         addFixedCostButton.layer.shadowOffset = CGSize(width: 3, height: 3)
         
+        totalFixedCostBackView.layer.cornerRadius = 20
         totalFixedCostBackView.layer.shadowOpacity = 0.5
         totalFixedCostBackView.layer.shadowRadius = 3
         totalFixedCostBackView.layer.shadowColor = UIColor.darkGray.cgColor
@@ -147,7 +148,7 @@ final class FixedCostViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "キャンセル",
                                          style: .cancel,
                                          handler: nil)
-        let buyAction = UIAlertAction(title: "OK",
+        let buyAction = UIAlertAction(title: "設定",
                                       style: .default) { [self] _ in
             if controller.textFields?.first?.text == "" {
                 let dialog = UIAlertController(title: "未入力", message: "金額を入力してください", preferredStyle: .alert)
