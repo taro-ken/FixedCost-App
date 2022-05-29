@@ -124,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				B4BD48B8283C5DC300F72712 /* Extension */,
+				B45F25BA283A772300170675 /* Model */,
+				B45F25AD283A5B9A00170675 /* View */,
 				B4E4DF6E28403A5100A1D7F7 /* Edit */,
 				B45F25B5283A700E00170675 /* Add */,
 				B45F25AC283A5B7D00170675 /* FixedCost */,
@@ -156,7 +158,8 @@
 		B45F25AC283A5B7D00170675 /* FixedCost */ = {
 			isa = PBXGroup;
 			children = (
-				B45F25AD283A5B9A00170675 /* View */,
+				B45F2580283A3C3200170675 /* FixedCostViewController.swift */,
+				B45F2582283A3C3200170675 /* FixedCost.storyboard */,
 			);
 			path = FixedCost;
 			sourceTree = "<group>";
@@ -166,8 +169,6 @@
 			children = (
 				B45F25AE283A5BB800170675 /* FixedCostCell.swift */,
 				B45F25AF283A5BB800170675 /* FixedCostCell.xib */,
-				B45F2580283A3C3200170675 /* FixedCostViewController.swift */,
-				B45F2582283A3C3200170675 /* FixedCost.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +176,6 @@
 		B45F25B5283A700E00170675 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				B45F25BA283A772300170675 /* Model */,
 				B45F25B6283A704900170675 /* AddfixedCostViewController.swift */,
 				B45F25B8283A711200170675 /* AddfixedCost.storyboard */,
 			);
@@ -536,6 +536,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZCR4QT36HT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FixedCost-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -563,6 +564,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZCR4QT36HT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FixedCost-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

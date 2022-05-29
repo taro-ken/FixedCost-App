@@ -16,6 +16,8 @@ final class CostModel: Object {
     @objc dynamic var memo: String?
 }
 
-
+final class ItemList: Object {
+    let list = List<CostModel>()
+}
 
 

@@ -11,7 +11,10 @@ import RealmSwift
 final class FixedCostViewController: UIViewController {
     
     private var fixedCostCell = "FixedCostCell"
-    private var costModel: Results<CostModel>!
+    private var listModel: List<CostModel>!
+    private var costModel = CostModel()
+    private var editflag = false
+    private  let realm = try! Realm()
     private var totalCostContainer:Int = 0
     private var differenceContainer:Int = 0
     @IBOutlet weak var totalFixedCost: UILabel!
@@ -63,22 +66,24 @@ final class FixedCostViewController: UIViewController {
         
         addFixedCostButton.addTarget(self, action: #selector(addFixedCost), for: .touchUpInside)
         
-        guard let realm = try? Realm() else {return}
-        costModel = realm.objects(CostModel.self)
-        fixedCostTableView.reloadData()
+        listModel = realm.objects(ItemList.self).first?.list
         
-        totalCostContainer = realm.objects(CostModel.self).map {$0.value}.reduce(0, +)
+        totalCostContainer = realm.objects(CostModel.self).compactMap {$0.value}.reduce(0, +)
         totalFixedCost.text = "\(totalCostContainer.withCommaString)円"
         let salary = UserDefaults.standard.integer(forKey: "salary")
         differenceContainer = salary - totalCostContainer
         
-        if differenceContainer <= 0 {
+        if differenceContainer < 0 {
             differenceLabel.textColor = .red
+            differenceLabel.text = "\(differenceContainer.withCommaString)円"
+        } else if differenceContainer == 0 {
+            differenceLabel.textColor = .black
             differenceLabel.text = "\(differenceContainer.withCommaString)円"
         } else {
             differenceLabel.textColor = .systemCyan
             differenceLabel.text = "+\(differenceContainer.withCommaString)円"
         }
+        fixedCostTableView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -99,17 +104,23 @@ final class FixedCostViewController: UIViewController {
     @IBAction func differenceSwich(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            if differenceContainer <= 0 {
+            if differenceContainer < 0 {
                 differenceLabel.textColor = .red
+                differenceLabel.text = "\(differenceContainer.withCommaString)円"
+            } else if differenceContainer == 0 {
+                differenceLabel.textColor = .black
                 differenceLabel.text = "\(differenceContainer.withCommaString)円"
             } else {
                 differenceLabel.textColor = .systemCyan
                 differenceLabel.text = "+\(differenceContainer.withCommaString)円"
             }
         case 1:
-            if differenceContainer <= 0 {
+            if differenceContainer < 0 {
                 differenceLabel.textColor = .red
                 differenceLabel.text = "\((differenceContainer * 12).withCommaString)円"
+            } else if differenceContainer == 0 {
+                differenceLabel.textColor = .black
+                differenceLabel.text = "\(differenceContainer.withCommaString)円"
             } else {
                 differenceLabel.textColor = .systemCyan
                 differenceLabel.text = "+\((differenceContainer * 12).withCommaString)円"
@@ -156,39 +167,67 @@ final class FixedCostViewController: UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
     
-    
+    @IBAction func doneEditTable(_ sender: Any) {
+        if editflag == true {
+            editflag = false
+        } else {
+            editflag = true
+        }
+        fixedCostTableView.setEditing(editflag, animated: true)
+        fixedCostTableView.isEditing = editflag
+    }
 }
 
 extension FixedCostViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        fixedCostTableView.setEditing(editing, animated: animated)
+        fixedCostTableView.isEditing = editing
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if costModel.isEmpty {
+        if realm.objects(CostModel.self).isEmpty {
             emptyLabel.isHidden = false
         } else {
             emptyLabel.isHidden = true
         }
-        return costModel.count
+        return realm.objects(CostModel.self).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = fixedCostTableView.dequeueReusableCell(withIdentifier: fixedCostCell, for: indexPath) as? FixedCostCell else {
             return UITableViewCell()
         }
-        cell.configure(model: costModel[indexPath.row])
+        cell.configure(model: listModel[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let realm = try? Realm() else {return}
         try?realm.write {
-            realm.delete(costModel[indexPath.row])
+            realm.delete(listModel[indexPath.row])
         }
-        fixedCostTableView.deleteRows(at: [indexPath], with: .automatic)
+        fixedCostTableView.deleteRows(at: [indexPath], with: .fade)
         viewDidLoad()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cost = costModel[indexPath.row]
+        let cost = listModel[indexPath.row]
         Router.shard.showCostEdit(from: self, model: cost)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        try! realm.write {
+            let listItem = listModel[fromIndexPath.row]
+            listModel.remove(at: fromIndexPath.row)
+            listModel.insert(listItem, at: to.row)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
     }
 }
 
