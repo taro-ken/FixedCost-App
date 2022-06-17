@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02CF9F118EAD08CA68BDE3C9 /* Pods_FixedCost_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C67A6BEA393C7A432CADEE41 /* Pods_FixedCost_AppTests.framework */; };
+		2DC4D057E16B50B66707CED3 /* Pods_FixedCost_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4941C7460E6390D34A096D7F /* Pods_FixedCost_AppUITests.framework */; };
+		3E1799B8F29E61F174931C99 /* Pods_FixedCost_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 907A399946ACFCDAD07CFA03 /* Pods_FixedCost_App.framework */; };
+		B44BDB48285C24270085560A /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B44BDB47285C24270085560A /* Realm */; };
+		B44BDB4A285C24270085560A /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B44BDB49285C24270085560A /* RealmSwift */; };
 		B45F257D283A3C3200170675 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F257C283A3C3200170675 /* AppDelegate.swift */; };
 		B45F257F283A3C3200170675 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F257E283A3C3200170675 /* SceneDelegate.swift */; };
 		B45F2581283A3C3200170675 /* FixedCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F2580283A3C3200170675 /* FixedCostViewController.swift */; };
@@ -21,14 +26,11 @@
 		B45F25B7283A704900170675 /* AddfixedCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F25B6283A704900170675 /* AddfixedCostViewController.swift */; };
 		B45F25B9283A711200170675 /* AddfixedCost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45F25B8283A711200170675 /* AddfixedCost.storyboard */; };
 		B45F25BC283A773700170675 /* CostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45F25BB283A773700170675 /* CostModel.swift */; };
-		B4BD48B5283BBB6C00F72712 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B4BD48B4283BBB6C00F72712 /* Realm */; };
-		B4BD48B7283BBB6C00F72712 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B4BD48B6283BBB6C00F72712 /* RealmSwift */; };
 		B4BD48BA283C5DE100F72712 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4BD48B9283C5DE100F72712 /* Storyboard+.swift */; };
 		B4E4DF7028403A8900A1D7F7 /* EditCostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4DF6F28403A8900A1D7F7 /* EditCostViewController.swift */; };
 		B4E4DF7228403AA400A1D7F7 /* EditCost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4E4DF7128403AA400A1D7F7 /* EditCost.storyboard */; };
 		B4E4DF7A2841B96B00A1D7F7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4DF792841B96B00A1D7F7 /* Router.swift */; };
 		B4E4DF7C2841C7A200A1D7F7 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E4DF7B2841C7A200A1D7F7 /* Int+.swift */; };
-		B4E4DF8C2842F10300A1D7F7 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06F6705B8B777DF6946F4D83 /* Pods-FixedCost-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-AppTests/Pods-FixedCost-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		322E3BA60F5FC9A2C3BF90DA /* Pods-FixedCost-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-App/Pods-FixedCost-App.debug.xcconfig"; sourceTree = "<group>"; };
+		4941C7460E6390D34A096D7F /* Pods_FixedCost_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedCost_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D4FFB502C9A21127B36D6AF /* Pods-FixedCost-AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-AppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-AppUITests/Pods-FixedCost-AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7CB56FD82B6CDDBD50F790DE /* Pods-FixedCost-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-App/Pods-FixedCost-App.release.xcconfig"; sourceTree = "<group>"; };
+		845460F7FBAFD947FC0F3060 /* Pods-FixedCost-AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-AppUITests/Pods-FixedCost-AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		907A399946ACFCDAD07CFA03 /* Pods_FixedCost_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedCost_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45F2579283A3C3200170675 /* FixedCost-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FixedCost-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45F257C283A3C3200170675 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B45F257E283A3C3200170675 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +81,8 @@
 		B4E4DF7128403AA400A1D7F7 /* EditCost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditCost.storyboard; sourceTree = "<group>"; };
 		B4E4DF792841B96B00A1D7F7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B4E4DF7B2841C7A200A1D7F7 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		C35B2CE0687F2094AC897890 /* Pods-FixedCost-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FixedCost-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FixedCost-AppTests/Pods-FixedCost-AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C67A6BEA393C7A432CADEE41 /* Pods_FixedCost_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FixedCost_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4BD48B7283BBB6C00F72712 /* RealmSwift in Frameworks */,
-				B4BD48B5283BBB6C00F72712 /* Realm in Frameworks */,
-				B4E4DF8C2842F10300A1D7F7 /* IQKeyboardManagerSwift in Frameworks */,
+				B44BDB4A285C24270085560A /* RealmSwift in Frameworks */,
+				B44BDB48285C24270085560A /* Realm in Frameworks */,
+				3E1799B8F29E61F174931C99 /* Pods_FixedCost_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CF9F118EAD08CA68BDE3C9 /* Pods_FixedCost_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +108,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC4D057E16B50B66707CED3 /* Pods_FixedCost_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58CC893254A0CDC18B8F23B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				907A399946ACFCDAD07CFA03 /* Pods_FixedCost_App.framework */,
+				C67A6BEA393C7A432CADEE41 /* Pods_FixedCost_AppTests.framework */,
+				4941C7460E6390D34A096D7F /* Pods_FixedCost_AppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B45F2570283A3C3200170675 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +132,8 @@
 				B45F2592283A3C3700170675 /* FixedCost-AppTests */,
 				B45F259C283A3C3700170675 /* FixedCost-AppUITests */,
 				B45F257A283A3C3200170675 /* Products */,
+				CEAC40C72382D07A47DD63F6 /* Pods */,
+				58CC893254A0CDC18B8F23B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,6 +236,19 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		CEAC40C72382D07A47DD63F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				322E3BA60F5FC9A2C3BF90DA /* Pods-FixedCost-App.debug.xcconfig */,
+				7CB56FD82B6CDDBD50F790DE /* Pods-FixedCost-App.release.xcconfig */,
+				06F6705B8B777DF6946F4D83 /* Pods-FixedCost-AppTests.debug.xcconfig */,
+				C35B2CE0687F2094AC897890 /* Pods-FixedCost-AppTests.release.xcconfig */,
+				4D4FFB502C9A21127B36D6AF /* Pods-FixedCost-AppUITests.debug.xcconfig */,
+				845460F7FBAFD947FC0F3060 /* Pods-FixedCost-AppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,9 +256,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B45F25A3283A3C3700170675 /* Build configuration list for PBXNativeTarget "FixedCost-App" */;
 			buildPhases = (
+				A97092993A973BBBD1B41133 /* [CP] Check Pods Manifest.lock */,
 				B45F2575283A3C3200170675 /* Sources */,
 				B45F2576283A3C3200170675 /* Frameworks */,
 				B45F2577283A3C3200170675 /* Resources */,
+				777B8D9C199F9B47B8E3DF60 /* [CP] Embed Pods Frameworks */,
+				DD4343A3BD8B4ECD31447A40 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,9 +269,8 @@
 			);
 			name = "FixedCost-App";
 			packageProductDependencies = (
-				B4BD48B4283BBB6C00F72712 /* Realm */,
-				B4BD48B6283BBB6C00F72712 /* RealmSwift */,
-				B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */,
+				B44BDB47285C24270085560A /* Realm */,
+				B44BDB49285C24270085560A /* RealmSwift */,
 			);
 			productName = "FixedCost-App";
 			productReference = B45F2579283A3C3200170675 /* FixedCost-App.app */;
@@ -240,9 +280,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B45F25A6283A3C3700170675 /* Build configuration list for PBXNativeTarget "FixedCost-AppTests" */;
 			buildPhases = (
+				24131301B575C411D4B3C67C /* [CP] Check Pods Manifest.lock */,
 				B45F258B283A3C3700170675 /* Sources */,
 				B45F258C283A3C3700170675 /* Frameworks */,
 				B45F258D283A3C3700170675 /* Resources */,
+				E92B189612CEE86004F19DCA /* [CP] Embed Pods Frameworks */,
+				4CA550F14DB04AA6635AAFCF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B45F25A9283A3C3700170675 /* Build configuration list for PBXNativeTarget "FixedCost-AppUITests" */;
 			buildPhases = (
+				80484DA7C76643C39D7C8731 /* [CP] Check Pods Manifest.lock */,
 				B45F2595283A3C3700170675 /* Sources */,
 				B45F2596283A3C3700170675 /* Frameworks */,
 				B45F2597283A3C3700170675 /* Resources */,
+				D5B233B6A237780347571BEA /* [CP] Embed Pods Frameworks */,
+				92DD51ECC11DEDFEF3B9C0F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,8 +351,7 @@
 			);
 			mainGroup = B45F2570283A3C3200170675;
 			packageReferences = (
-				B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */,
-				B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				B44BDB46285C24270085560A /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = B45F257A283A3C3200170675 /* Products */;
 			projectDirPath = "";
@@ -348,6 +393,180 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24131301B575C411D4B3C67C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4CA550F14DB04AA6635AAFCF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-AppTests/Pods-FixedCost-AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		777B8D9C199F9B47B8E3DF60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-App/Pods-FixedCost-App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80484DA7C76643C39D7C8731 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		92DD51ECC11DEDFEF3B9C0F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-AppUITests/Pods-FixedCost-AppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A97092993A973BBBD1B41133 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D5B233B6A237780347571BEA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-AppUITests/Pods-FixedCost-AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD4343A3BD8B4ECD31447A40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-App/Pods-FixedCost-App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E92B189612CEE86004F19DCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FixedCost-AppTests/Pods-FixedCost-AppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B45F2575283A3C3200170675 /* Sources */ = {
@@ -469,7 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -523,7 +742,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -535,15 +754,17 @@
 		};
 		B45F25A4283A3C3700170675 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322E3BA60F5FC9A2C3BF90DA /* Pods-FixedCost-App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = ZCR4QT36HT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FixedCost-App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "固定費管理";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = FixedCost;
@@ -554,7 +775,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "swift-tk.FixedCost-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -565,15 +786,17 @@
 		};
 		B45F25A5283A3C3700170675 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CB56FD82B6CDDBD50F790DE /* Pods-FixedCost-App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = ZCR4QT36HT;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FixedCost-App/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "固定費管理";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = FixedCost;
@@ -584,7 +807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "swift-tk.FixedCost-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -595,6 +818,7 @@
 		};
 		B45F25A7283A3C3700170675 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06F6705B8B777DF6946F4D83 /* Pods-FixedCost-AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -614,6 +838,7 @@
 		};
 		B45F25A8283A3C3700170675 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C35B2CE0687F2094AC897890 /* Pods-FixedCost-AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -633,6 +858,7 @@
 		};
 		B45F25AA283A3C3700170675 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D4FFB502C9A21127B36D6AF /* Pods-FixedCost-AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,6 +876,7 @@
 		};
 		B45F25AB283A3C3700170675 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 845460F7FBAFD947FC0F3060 /* Pods-FixedCost-AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -707,17 +934,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		B44BDB46285C24270085560A /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -726,20 +945,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B4BD48B4283BBB6C00F72712 /* Realm */ = {
+		B44BDB47285C24270085560A /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = B44BDB46285C24270085560A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
-		B4BD48B6283BBB6C00F72712 /* RealmSwift */ = {
+		B44BDB49285C24270085560A /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B4BD48B3283BBB6C00F72712 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = B44BDB46285C24270085560A /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
-		};
-		B4E4DF8B2842F10300A1D7F7 /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B4E4DF8A2842F10300A1D7F7 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
